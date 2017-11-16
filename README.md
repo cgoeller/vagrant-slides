@@ -10,11 +10,18 @@
 * CLI only
 * Plugins
 * Maintained by Hashicorp
-* Opensource
+* Opensource, VMware plugin for money
 * www.vagrantup.com
 * Base boxes
+  * Cloud https://app.vagrantup.com/boxes/search
+  * Self-made with Packer or Vagrant (based on existing box)
 * Provisioners
   * Shell, Ansible, Puppet, Chef
-* Proividers
+* Providers
 * Multi-VM environments
-* Vagrantfile
+* Vagrantfile in SCM
+  * Configuration of box
+  * Definition of desired state
+  * Box customization (HW, Network)
+* Synced Folders
+* Port forwarding
