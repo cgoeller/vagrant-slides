@@ -39,3 +39,10 @@ The presentation was created using [reveal.js](https://revealjs.com)
   * Box customization (HW, Network)
 * Synced Folders
 * Port forwarding
+
+## Examples
+
+* Elasticsearch 6.0.0 Single-Node
+* Elasticsearch 6.0.0 Cluster
+* Maven-Build (settings.xml from client)
+* Docker-Engine
