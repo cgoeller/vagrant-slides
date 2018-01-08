@@ -1,0 +1,7 @@
+---
+# Playbook to install docker engine
+
+- name: Install docker
+  hosts: my-server
+  roles:
+    - docker-engine
