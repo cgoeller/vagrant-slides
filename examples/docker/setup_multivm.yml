@@ -1,0 +1,14 @@
+---
+# - name: Install docker
+#   hosts: docker-swarm
+#   roles:
+#     - docker-engine
+
+# - hosts: docker-swarm
+#   become: true
+#   tasks:
+#     - name: Install docker-py
+#       pip:
+#         name: docker-py
+
+- import_playbook: docker-swarm.yml
