@@ -22,3 +22,4 @@
     - apt-transport-https
     - ca-certificates
     - software-properties-common
+    - bash-completion

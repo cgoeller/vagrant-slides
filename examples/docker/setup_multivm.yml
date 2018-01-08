@@ -1,14 +1,25 @@
 ---
-# - name: Install docker
-#   hosts: docker-swarm
-#   roles:
-#     - docker-engine
+- name: Install docker
+  hosts: docker-swarm
+  roles:
+    - docker-engine
 
-# - hosts: docker-swarm
-#   become: true
-#   tasks:
-#     - name: Install docker-py
-#       pip:
-#         name: docker-py
+- name: Additional setup for docker
+  hosts: docker-swarm
+  become: true
+  tasks:
+    - name: Install docker-py
+      pip:
+        name: docker-py
+    - name: Fix /etc/hosts
+      lineinfile:
+        path: /etc/hosts
+        regexp: '^::1'
+        state: absent
 
 - import_playbook: docker-swarm.yml
+
+- name: Deploy registry as service
+  hosts: manager[0]
+  roles:
+    - registry

@@ -1,0 +1,24 @@
+---
+# {{ ansible_managed }}
+version: '3.4'
+
+volumes:
+  data: {}
+  
+services:
+  registry:
+    image: registry:2
+    ports:
+      - target: 5000
+        published: 5000
+        protocol: tcp
+        mode: ingress
+    deploy:
+      mode: replicated
+      replicas: 1
+      placement:
+        constraints:
+          - node.hostname == docker-1
+    volumes:
+      - data:/var/lib/registry
+    restart: always
