@@ -16,10 +16,18 @@
         path: /etc/hosts
         regexp: '^::1'
         state: absent
+    # https://www.elastic.co/guide/en/elasticsearch/reference/master/vm-max-map-count.html --> 262144
+    - name: Increase maximum map count
+      become: true
+      sysctl:
+        name: vm.max_map_count
+        value: 262144
 
 - import_playbook: docker-swarm.yml
 
-- name: Deploy registry as service
+- name: Deploy stacks
   hosts: manager[0]
   roles:
     - registry
+    - portainer
+    - proxy
