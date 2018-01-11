@@ -1,12 +1,11 @@
 ---
 # {{ ansible_managed }}
-version: '3.4'
+version: '3.5'
 
 networks:
     proxy:
-      driver: overlay
-      driver_opts:
-        encrypted: "true"
+      external: true
+      name: net_proxy # the external name
 
 services:
   proxy:

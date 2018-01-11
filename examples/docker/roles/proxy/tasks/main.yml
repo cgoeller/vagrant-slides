@@ -1,4 +1,11 @@
 ---
+- name: Create overlay network 'proxy'
+  docker_network:
+    name: net_proxy
+    driver: overlay
+    driver_options:
+      encrypted: "true"
+
 - name: Create compose file
   become: true
   template:
