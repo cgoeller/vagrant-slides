@@ -46,3 +46,4 @@ The presentation was created using [reveal.js](https://revealjs.com)
 * Elasticsearch 6.0.0 Cluster
 * Maven-Build (settings.xml from client)
 * Docker-Engine
+* Docker swarm mode with ES Cluster
