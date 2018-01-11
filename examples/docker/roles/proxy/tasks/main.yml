@@ -1,5 +1,6 @@
 ---
 - name: Create overlay network 'proxy'
+  become: true
   docker_network:
     name: net_proxy
     driver: overlay
