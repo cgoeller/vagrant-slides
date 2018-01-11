@@ -33,6 +33,9 @@ services:
       bootstrap.memory_lock: "false"
       http.cors.enabled: "true"
       http.cors.allow-origin: "*"
+      # for jwilder/nginx-proxy
+      VIRTUAL_HOST: es.test.local
+      VIRTUAL_PORT: 9200
     healthcheck:
       disable: true
       # test: "curl --silent --fail localhost:9200/_cluster/health?wait_for_status=yellow&timeout=50s || exit 1"

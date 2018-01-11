@@ -48,13 +48,16 @@ vagrant provision --provision-with setup_es
 # Access ES using:
 
 # Over traefic
-curl -v -u "user:password" -H "Host: es.test.local" http://192.168.56.11/
+curl -vs -u "user:password" -H "Host: es.test.local" http://192.168.56.11/
 
 # Over nginx
-curl -v http://192.168.56.11:90/
+curl -vs http://192.168.56.11:90/
 
-# Over port bindung
-curl -v http://192.168.56.11:9200/
+# Over jwilder/nginx-proxy
+curl -vs -H "Host: es.test.local" http://192.168.56.11:100/
+
+# Over port binding
+curl -vs http://192.168.56.11:9200/
 ```
 
 Optionally add the following line to your `/etc/hosts` to access ES by hostname.

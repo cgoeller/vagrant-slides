@@ -4,4 +4,5 @@
   roles:
     - es-image
     - proxy2 # nginx proxy for comparison with traefik
+    - nginx-proxy # jwilder/nginx-proxy
     - elasticsearch
