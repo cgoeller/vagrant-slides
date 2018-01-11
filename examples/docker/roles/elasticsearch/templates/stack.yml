@@ -42,8 +42,8 @@ services:
     ports:
       - "9200:9200"
     deploy:
-      mode: replicated
-      replicas: 3
+      mode: global
+      #replicas: 3
       endpoint_mode: vip # needed for exposed port in ingress mode
       labels:
         - "traefik.port=9200"
