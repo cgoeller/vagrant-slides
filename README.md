@@ -29,9 +29,10 @@ The presentation was created using [reveal.js](https://revealjs.com)
 * Base boxes
   * Cloud <https://app.vagrantup.com/boxes/search>
   * Self-made with Packer or Vagrant (based on existing box)
-* Provisioners
-  * Shell, Ansible, Puppet, Chef
 * Providers
+  * Virtualbox, VMWare Workstation, etc.
+* Provisioners
+  * Shell, File, Ansible, Puppet, Chef, etc.
 * Multi-VM environments
 * Vagrantfile in SCM
   * Configuration of box
